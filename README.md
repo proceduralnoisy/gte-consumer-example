@@ -20,7 +20,7 @@ You can also build and debug with an IDE. For further details on using Conan, co
 **Note**
 As of June 3, 2025, the Conan recipe for GTE is [awaiting merge](https://github.com/conan-io/conan-center-index/pull/27563). You can locally install the pending recipe as follows:
 * Clone [this repository](https://github.com/proceduralnoisy/conan-center-index) and checkout the add-geometrictools branch.
-* Run the following:
+* Run the following command to create the package and make it available in the local Conan cache:
 ```
 cd recipes/geometrictoolsengine/all
 conan create . --version=8.0
