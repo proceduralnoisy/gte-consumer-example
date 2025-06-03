@@ -14,7 +14,7 @@ find_package(GTest CONFIG REQUIRED)
 
 include(GoogleTest)
 
-add_executable(TestDistanceUnitAlignedBoxes TestDistanceUnitAlignedBoxes.cpp)
-target_link_libraries(TestDistanceUnitAlignedBoxes PRIVATE SimpleGeometry GTest::gtest_main)
+add_executable(TestSimpleGeometry TestDistanceUnitAlignedBoxes.cpp)
+target_link_libraries(TestSimpleGeometry PRIVATE SimpleGeometry GTest::gtest_main)
 
-gtest_discover_tests(TestDistanceUnitAlignedBoxes)
+gtest_discover_tests(TestSimpleGeometry)
