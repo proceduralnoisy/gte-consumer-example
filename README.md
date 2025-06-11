@@ -10,18 +10,18 @@ To install depenedencies, build, and run the tests:
 ```
 conan profile detect --force
 ```  
-* Clone this repository
-* Build using Conan (automatically retrieving and building any necessary dependencies):
-```
-conan build . --build=missing
-```
-You can also build and debug with an IDE. For further details on using Conan, consult the [Conan Tutorials](https://docs.conan.io/2/tutorial.html)
-
-**Note**
-As of June 3, 2025, the Conan recipe for GTE is [awaiting merge](https://github.com/conan-io/conan-center-index/pull/27563). You can locally install the pending recipe as follows:
-* Clone [this repository](https://github.com/proceduralnoisy/conan-center-index) and checkout the add-geometrictools branch.
-* Run the following command to create the package and make it available in the local Conan cache:
+* **Temporary**: As of June 3, 2025, the Conan recipe for GTE is [awaiting merge](https://github.com/conan-io/conan-center-index/pull/27563). Until that PR is merged, you can locally install the recipe as follows:
+  * Clone [this repository](https://github.com/proceduralnoisy/conan-center-index)
+  * Checkout the add-geometrictools branch (`git checkout -t origin/add-geometrictools`).
+  * Run the following command to create the package and make it available in the local Conan cache:
 ```
 cd recipes/geometrictoolsengine/all
 conan create . --version=8.0
 ```
+* Clone this repository
+* Build using Conan (automatically retrieving and building any necessary dependencies):
+```
+cd HeaderOnly
+conan build . --build=missing
+```
+You can also build and debug with an IDE. For further details on using Conan, consult the [Conan Tutorials](https://docs.conan.io/2/tutorial.html)
