@@ -3,10 +3,12 @@ project(HeaderOnly LANGUAGES CXX)
 
 include(CTest)
 
-find_package(GeometricToolsEngine CONFIG REQUIRED)
-
 add_library(SimpleGeometry DistanceUnitAlignedBoxes.h DistanceUnitAlignedBoxes.cpp)
-target_link_libraries(SimpleGeometry PRIVATE GeometricToolsEngine::Mathematics)
+
+if (PN_USE_GTE)
+    find_package(GeometricToolsEngine CONFIG REQUIRED)
+    target_link_libraries(SimpleGeometry PRIVATE GeometricToolsEngine::Mathematics)
+endif()
 
 # Create unit test target
 

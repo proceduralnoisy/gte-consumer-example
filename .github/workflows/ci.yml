@@ -11,6 +11,8 @@ jobs:
 
       - name: Install and setup Conan
         uses: conan-io/setup-conan@v1
+        with:
+          cache_packages: true
 
       - name: Build
         run: |

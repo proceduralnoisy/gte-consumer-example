@@ -24,7 +24,10 @@ class HeaderOnlyExample(ConanFile):
     def generate(self):
         tc = CMakeToolchain(self)
         if self.options.geometry_provider == "gte":
-            tc.preprocessor_definitions["PN_USE_GTE"] = None
+            tc.variables["PN_USE_GTE"] = True
+            tc.preprocessor_definitions["PN_USE_GTE"] = True
+        else:
+            tc.variables["PN_USE_GTE"] = False
         tc.generate()
 
         deps = CMakeDeps(self)
