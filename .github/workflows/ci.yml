@@ -14,4 +14,4 @@ jobs:
 
       - name: Build
         run: |
-          conan build HeaderOnly --build=missing
+          conan build HeaderOnly --build=missing --options geometry_provider="none"
