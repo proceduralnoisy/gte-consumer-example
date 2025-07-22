@@ -1,3 +1,5 @@
+# NOTE: This is a simple, barebones .gitignore file that may not represent best practices for more complex projects.
+
 build/
 CMakeUserPresets.json
 .vs
